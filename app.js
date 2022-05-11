@@ -5,12 +5,14 @@ const popoutContainer = document.querySelector('#popout-container')
 const exit = document.querySelector('#exit')
 const popoutContent = document.querySelector('#popout-content')
 
+// Simple slide in animation for 'Explore' text on windowload
 window.onload = () => {
   setTimeout(() => {
     explore.classList.add('on-load')
-  }, 400);
+  }, 300);
 }
 
+// Functions to handle #popout-container events
 popoutBtn.addEventListener('click', () => {
   leftContainer.classList.add('hide')
   popoutContainer.classList.add('popout')
