@@ -1,18 +1,18 @@
-/* Simple approach */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+/* Append png or avif depending on browser support */
 .fallback {
-  background-image: url('./assets/Coding-Challenge-Image-min-resized.png')
+  background-image: url("./assets/Coding-Challenge-Image-min-resized.png");
 }
 
 .avif {
-  background-image: url('./assets/Coding-Challenge-Image-min-resized.avif')
+  background-image: url("./assets/Coding-Challenge-Image-min-resized.avif");
 }
-
 
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 * body {
@@ -39,9 +39,10 @@
 }
 
 #main-left #left-container #explore {
+  font-family: "Playfair Display";
   color: #fff;
   font-size: 224px;
-  padding-left: 165px;
+  padding-left: 148px;
   font-weight: 700;
   -webkit-transition: margin-left 750ms ease-out, opacity 900ms ease-out, font-size 450ms ease-out;
   transition: margin-left 750ms ease-out, opacity 900ms ease-out, font-size 450ms ease-out;
@@ -64,7 +65,7 @@
 
 #main-left #left-container #popout-button img:hover {
   -webkit-transform: scale(1.05);
-  transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 #main-left #left-container #popout-button span {
@@ -77,12 +78,12 @@
 
 #main-left #left-container #popout-button span:hover {
   -webkit-transform: scale(1.05);
-  transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-#main-left #left-container #popout-button:active>img {
+#main-left #left-container #popout-button:active > img {
   -webkit-transform: scale(0.6);
-  transform: scale(0.6);
+          transform: scale(0.6);
 }
 
 #popout-container {
@@ -91,7 +92,7 @@
   background: #fff;
   position: fixed;
   -webkit-box-shadow: 0px 0px 10px 7px #0000004C;
-  box-shadow: 0px 0px 10px 7px #0000004C;
+          box-shadow: 0px 0px 10px 7px #0000004C;
   -webkit-transition: all 425ms ease-out, opacity 200ms ease-out .1s;
   transition: all 425ms ease-out, opacity 200ms ease-out .1s;
   border-radius: 100%;
@@ -112,11 +113,12 @@
 
 #popout-container #exit:active {
   -webkit-transform: scale(0.8) translate(1px);
-  transform: scale(0.8) translate(1px);
+          transform: scale(0.8) translate(1px);
   padding: 1px;
 }
 
 #popout-container #popout-header {
+  font-family: "Playfair Display";
   position: relative;
   color: #611818;
   font-weight: 700;
@@ -162,7 +164,7 @@
   letter-spacing: 1.69px;
   border: none;
   -webkit-box-shadow: -3px -3px 3px #611818;
-  box-shadow: -3px -3px 3px #611818;
+          box-shadow: -3px -3px 3px #611818;
 }
 
 #popout-container #popout-content #cta:hover {
@@ -172,9 +174,9 @@
 
 #popout-container #popout-content #cta:active {
   -webkit-transform: translate(-4px, -4px);
-  transform: translate(-4px, -4px);
+          transform: translate(-4px, -4px);
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 #main-right {
@@ -188,12 +190,12 @@
 
 #main-right #link-container a:hover {
   -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #main-right #link-container a:active {
   -webkit-transform: scale(0.9);
-  transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .on-load {
@@ -228,7 +230,6 @@
   #main-left #left-container {
     margin-bottom: 125px;
   }
-
   #popout-container {
     margin-bottom: 50px;
   }
@@ -238,7 +239,6 @@
   #main-left #left-container {
     margin-bottom: 50px !important;
   }
-
   #popout-container {
     margin-bottom: 25px !important;
     max-height: 90vh !important;
@@ -250,21 +250,15 @@
   #main-left {
     max-width: 325px;
   }
-
   #main-left #left-container #explore {
     font-size: 150px;
-    padding-left: 160px;
+    padding-left: 148px;
   }
 }
 
 @media only screen and (max-width: 920px) {
-  #main-left #left-container {
-    margin-bottom: 125px;
-  }
-
-  #main-left #popout-container {
+  #popout-container {
     margin-left: 110px;
-    margin-bottom: 50px;
   }
 }
 
@@ -272,43 +266,38 @@
   main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-
   main #main-left {
     max-width: 100%;
     -webkit-box-pack: start !important;
-    -ms-flex-pack: start !important;
-    justify-content: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: start !important;
     -webkit-box-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
+        -ms-flex: 0;
+            flex: 0;
     -webkit-box-shadow: 3px 3px 1px #611818;
-    box-shadow: 3px 3px 1px #611818;
+            box-shadow: 3px 3px 1px #611818;
   }
-
   main #main-left #left-container {
     margin: 0;
   }
-
   main #main-left #left-container #explore {
     font-size: 100px;
     padding-left: 100px;
   }
-
   main #main-left #left-container #popout-button {
     margin: 0px 100px 15px 0px;
   }
-
   main #popout-container {
     margin: auto !important;
     left: 10px;
     bottom: 50%;
     -webkit-transform: translateY(50%);
-    transform: translateY(50%);
+            transform: translateY(50%);
     -webkit-box-shadow: 4px 4px 4px #611818;
-    box-shadow: 4px 4px 4px #611818;
+            box-shadow: 4px 4px 4px #611818;
   }
 }
 
@@ -320,16 +309,14 @@
     left: 50% !important;
     bottom: 50% !important;
     -webkit-transform: translateX(-50%) translateY(50%) !important;
-    transform: translateX(-50%) translateY(50%) !important;
+            transform: translateX(-50%) translateY(50%) !important;
     -webkit-box-shadow: 4px 4px 4px #611818;
-    box-shadow: 4px 4px 4px #611818;
+            box-shadow: 4px 4px 4px #611818;
     overflow-y: auto;
   }
-
   #explore {
     padding-left: 20px !important;
   }
-
   #popout-button {
     margin: 0px 20px 15px 0px !important;
   }
@@ -339,22 +326,17 @@
   #popout-container {
     padding: 5px 15px 5px 15px !important;
   }
-
   #popout-container #popout-header {
     font-size: 45px;
   }
-
   #explore {
     font-size: 50px !important;
   }
-
   #popout-button img {
     width: 25px;
   }
-
   #popout-button span {
     font-size: 20px !important;
   }
 }
-
 /*# sourceMappingURL=styles.css.map */
