@@ -21,21 +21,40 @@
   max-width: 413px;
 }
 
+#main-left #left-container {
+  -webkit-transition: opacity 100ms ease-out, margin-bottom 425ms ease-out;
+  transition: opacity 100ms ease-out, margin-bottom 425ms ease-out;
+  z-index: 2;
+  margin-bottom: 220px;
+}
+
 #main-left #left-container #explore {
   color: #fff;
   font-size: 224px;
   padding-left: 165px;
   font-weight: 700;
+  -webkit-transition: margin-left 750ms ease-out, opacity 900ms ease-out;
+  transition: margin-left 750ms ease-out, opacity 900ms ease-out;
+  opacity: 0;
+  margin-left: -955px;
 }
 
 #main-left #left-container #popout-button {
   padding-right: 6px;
-  padding-bottom: 220px;
   gap: 16px;
 }
 
 #main-left #left-container #popout-button img {
   cursor: pointer;
+  -webkit-transition: -webkit-transform 50ms ease-out;
+  transition: -webkit-transform 50ms ease-out;
+  transition: transform 50ms ease-out;
+  transition: transform 50ms ease-out, -webkit-transform 50ms ease-out;
+}
+
+#main-left #left-container #popout-button img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 #main-left #left-container #popout-button span {
@@ -46,23 +65,40 @@
   cursor: pointer;
 }
 
+#main-left #left-container #popout-button:active > img {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
 #popout-container {
-  display: none;
-  width: 580px;
-  height: 702px;
   margin: 150px;
   padding: 60px 65px 50px 65px;
   background: #fff;
-  position: relative;
+  position: fixed;
   -webkit-box-shadow: 0px 0px 10px 7px #0000004C;
           box-shadow: 0px 0px 10px 7px #0000004C;
+  -webkit-transition: all 425ms ease-out, opacity 200ms ease-out .1s;
+  transition: all 425ms ease-out, opacity 200ms ease-out .1s;
+  border-radius: 100%;
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
 
 #popout-container #exit {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 23px 23px 0 0;
+  margin: 23px 23px 0 0;
+  cursor: pointer;
+  -webkit-transition: all 50ms ease-out;
+  transition: all 50ms ease-out;
+}
+
+#popout-container #exit:active {
+  -webkit-transform: scale(0.8) translate(1px);
+          transform: scale(0.8) translate(1px);
+  padding: 1px;
 }
 
 #popout-container #popout-header {
@@ -71,6 +107,9 @@
   font-weight: 700;
   font-size: 70px;
   padding-bottom: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 #popout-container #popout-header::after {
@@ -86,16 +125,18 @@
 }
 
 #popout-container #popout-content {
-  margin-top: 25px;
+  opacity: 0;
+  z-index: 0;
 }
 
 #popout-container #popout-content #popout-text {
+  margin-top: 25px;
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.35px;
 }
 
-#popout-container #popout-content #popout-btn {
+#popout-container #popout-content #cta {
   margin-top: 30px;
   width: 235px;
   height: 55px;
@@ -105,15 +146,76 @@
   font-size: 19px;
   letter-spacing: 1.69px;
   border: none;
+  -webkit-box-shadow: -3px -3px 3px #611818;
+          box-shadow: -3px -3px 3px #611818;
+}
+
+#popout-container #popout-content #cta:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#8f3535), to(#c58977));
+  background: linear-gradient(90deg, #8f3535 0%, #c58977 100%);
+}
+
+#popout-container #popout-content #cta:active {
+  -webkit-transform: translate(-4px, -4px);
+          transform: translate(-4px, -4px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #main-right {
-  background-image: url("./assets/Coding-Challenge-Image-min.png");
+  background-image: url("./assets/Coding-Challenge-Image-min-resized.png");
   background-size: cover;
 }
 
 #main-right #link-container {
   padding: 0px 26px 33px 0;
   gap: 20px;
+}
+
+#main-right #link-container a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#main-right #link-container a:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.on-load {
+  opacity: 1 !important;
+  margin-left: 0 !important;
+}
+
+.hide {
+  opacity: 0 !important;
+}
+
+.appear {
+  opacity: 1 !important;
+}
+
+.popout {
+  opacity: 1 !important;
+  width: 580px !important;
+  height: 702px !important;
+  border-radius: 0 !important;
+  z-index: 3 !important;
+}
+
+.popout-hide {
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-radius: 10% !important;
+}
+
+@media only screen and (max-height: 880px) {
+  #main-left #left-container {
+    margin-bottom: 125px;
+  }
+  #popout-container {
+    margin-bottom: 50px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
