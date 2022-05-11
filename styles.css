@@ -51,4 +51,9 @@ body main {
   background-size: cover;
   background-position: right;
 }
+
+#main-right #link-container {
+  padding: 0px 26px 33px 0;
+  gap: 20px;
+}
 /*# sourceMappingURL=styles.css.map */
