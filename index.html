@@ -16,7 +16,7 @@
       avif.onerror = function () {
         check_webp_feature(function (isSupported) {
           if (isSupported) {
-            return addClass("png");
+            return addClass("fallback");
           }
           return addClass("fallback");
         });
