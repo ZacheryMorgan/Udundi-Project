@@ -17,7 +17,33 @@ body main {
 
 #main-left {
   background: #611818;
+  position: relative;
   max-width: 413px;
+}
+
+#main-left #left-content #explore {
+  color: #fff;
+  font-size: 224px;
+  padding-left: 165px;
+  font-weight: 700;
+}
+
+#main-left #left-content #popout-button {
+  padding-right: 6px;
+  padding-bottom: 220px;
+  gap: 16px;
+}
+
+#main-left #left-content #popout-button img {
+  cursor: pointer;
+}
+
+#main-left #left-content #popout-button span {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 #main-right {
