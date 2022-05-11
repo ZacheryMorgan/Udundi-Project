@@ -314,4 +314,22 @@
     margin: 0px 20px 15px 0px !important;
   }
 }
+
+@media only screen and (max-width: 420px) {
+  #popout-container {
+    padding: 5px 15px 5px 15px !important;
+  }
+  #popout-container #popout-header {
+    font-size: 45px;
+  }
+  #explore {
+    font-size: 50px !important;
+  }
+  #popout-button img {
+    width: 25px;
+  }
+  #popout-button span {
+    font-size: 20px !important;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
