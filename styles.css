@@ -1,5 +1,5 @@
 /* Simple approach */
-.fallback .img {
+.fallback {
   background-image: url('./assets/Coding-Challenge-Image-min-resized.png')
 }
 
