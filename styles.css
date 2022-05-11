@@ -7,18 +7,6 @@
   background-image: url('./assets/Coding-Challenge-Image-min-resized.avif')
 }
 
-/* Add Support for high Pixel Ratio Devices (Retina) */
-@media screen and (min-resolution: 2dppx),
-screen and (-webkit-min-device-pixel-ratio: 2),
-screen and (min-resolution: 192dpi) {
-  .fallback img {
-    background-image: url('./assets/Coding-Challenge-Image-min-resized.png')
-  }
-
-  .avif {
-    background-image: url('./assets/Coding-Challenge-Image-min-resized.avif')
-  }
-}
 
 * {
   padding: 0;

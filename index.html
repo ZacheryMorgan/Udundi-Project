@@ -13,14 +13,14 @@
       avif.onload = function () {
         addClass("avif");
       };
-      // avif.onerror = function () {
-      //   check_webp_feature(function (isSupported) {
-      //     if (isSupported) {
-      //       return addClass("webp");
-      //     }
-      //     return addClass("fallback");
-      //   });
-      // };
+      avif.onerror = function () {
+        check_webp_feature(function (isSupported) {
+          if (isSupported) {
+            return addClass("png");
+          }
+          return addClass("fallback");
+        });
+      };
       function check_webp_feature(callback) {
         var img = new Image();
         img.onload = function () {
