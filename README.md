@@ -9,17 +9,19 @@ This is my entry for the  [Udundi Explore Page](https://zacherymorgan.github.io/
 
 ### Screenshot
 
-![](./assets/Screenshot_3.jpg)
-![](./assets/Screenshot_4.jpg)
+![](./assets/Screenshot_3.png)
+![](./assets/Screenshot_4.png)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://zacherymorgan.github.io/Udundi-Project/)
+- Live Site URL: [zacherymorgan.github.io/Udundi-Project](https://zacherymorgan.github.io/Udundi-Project/)
 
 ### Built with
 
 - Semantic HTML5 markup
 - SCSS
+- JavaScript
 - Flexbox
 - Bootstrap
-- AVIF > PNG
+- Script to check for browser compatibility with AVIF images
+- Mobile Responsiveness
